@@ -1,0 +1,36 @@
+name: Generate Typhoon Track Map
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-map:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Install system GIS dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgeos-dev proj-bin libproj-dev
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run typhoon plotting script
+        run: python typhoon_plot.py
+
+      - name: Upload generated image
+        uses: actions/upload-artifact@v4
+        with:
+          name: typhoon-map-output
+          path: 2608.png
