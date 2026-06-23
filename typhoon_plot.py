@@ -371,7 +371,7 @@ def create_typhoon_map():
     calc_motion(0, 2, "24H Avg", hours, lats, lons)
 
     # Save and Show (plt.show() does nothing on headless server)
-    plt.savefig('2608.png', dpi=300, bbox_inches='tight')
+    plt.savefig('2608.png', dpi=1300, bbox_inches='tight')
     plt.close()
     plt.show()
 
