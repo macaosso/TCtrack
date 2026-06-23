@@ -1,0 +1,8 @@
+numpy
+scipy
+matplotlib
+cartopy
+shapely
+pytz
+tzdata
+pillow
