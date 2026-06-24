@@ -50,7 +50,7 @@ STORM_DATA = {
     "past_track": {
         "lats": np.array([14.2,14.5,14.7,14.8,14.8,14.9,15.1]),
         "lons": np.array([147.8,146.5,145.6,144.9,143.9,142.8,141.9]),
-        "colors": ["#6DD8FA","#6DD8FA","#6DD8FA","#6DD8FA","#DDDFE2","#DDDFE2","#DDDFE2"
+        "colors": ["#6DD8FA","#6DD8FA","#6DD8FA","#6DD8FA","#DDDFE2","#DDDFE2","#DDDFE2"]
     },
     "icons": [
         os.path.join('TC logo', 'TD.png'), 
