@@ -40,25 +40,25 @@ KM_PER_DEG = 111.32
 #15, 50, 100, 170, 255, 345, 465
 STORM_DATA = {
     "forecast": {
-        "hours": np.array([0, 12, 24, 48, 72, 96, 120]),
-        "lats": np.array([14.2,16.0,16.9,19.4,24.9,34.3,38.3]),
-        "lons": np.array([147.8,144.9,142.6,137.9,135.0,142.7,154.0]),
-        "radii_km": [15, 60, 100, 170, 255, 345, 465]
+        "hours": np.array([0, 12, 24, 48, 72, 96]),
+        "lats": np.array([16.1,17.0,18.8,26.4,33.7,39.2]),
+        "lons": np.array([140.5,138.1,135.4,134.1,137.2,154.3]),
+        "radii_km": [15, 60, 100, 170, 255]
     },
 
     #"#DDDFE2","#6DD8FA","#9DD79C","#FFD363","#F78A31","#FF6F6F","#DE82FF"
     "past_track": {
-        "lats": np.array([14.2,14.2]),
-        "lons": np.array([147.8,147.8]),
-        "colors": ["#6DD8FA","#6DD8FA"]
+        "lats": np.array([14.2,14.5,14.7,14.8,14.8,14.9,15.1]),
+        "lons": np.array([147.8,146.5,145.6,144.9,143.9,142.8,141.9]),
+        "colors": ["#6DD8FA","#6DD8FA","#6DD8FA","#6DD8FA","#DDDFE2","#DDDFE2","#DDDFE2"
     },
     "icons": [
         os.path.join('TC logo', 'TD.png'), 
         os.path.join('TC logo', '12H.png'),  
         os.path.join('TC logo', 'TS.png'), 
-        os.path.join('TC logo', 'TS.png'),  
         os.path.join('TC logo', 'STS.png'),  
-        os.path.join('TC logo', 'TS.png'), 
+        os.path.join('TC logo', 'TS.png'),  
+        os.path.join('TC logo', 'Ex.png'), 
         os.path.join('TC logo', 'Ex.png')   
     ],
 
@@ -66,7 +66,7 @@ STORM_DATA = {
         # Format: (start_angle, end_angle, radius_in_km)
         "strong": [(0, 90, 0), 
                    (90, 180, 0), 
-                   (180, 270, 5), 
+                   (180, 270, 0), 
                    (270, 360, 0)],
         "storm": [(0, 90, 0), 
                   (90, 180, 0), 
